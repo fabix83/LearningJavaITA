@@ -1,3 +1,4 @@
+package IMC;
 
 public class Paciente {
 

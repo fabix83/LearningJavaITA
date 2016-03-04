@@ -1,3 +1,4 @@
+package IMC;
 
 public class Principal {
 
@@ -12,5 +13,6 @@ public class Principal {
 		System.out.println("IMC P1 = " + paciente1.CalcularIMC() + " / Diagnostico: " + paciente1.diagnostico()+ "\n");
 		System.out.println("IMC P2 = " + paciente2.CalcularIMC() + " / Diagnostico: " + paciente2.diagnostico()+ "\n");
 		System.out.println("IMC P3 = " + paciente3.CalcularIMC() + " / Diagnostico: " + paciente3.diagnostico()+ "\n");
+		
 	}
 }
