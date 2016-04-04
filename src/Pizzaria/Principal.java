@@ -66,7 +66,9 @@ public class Principal {
 		//Impressao dos ingredientes utilizados
 		System.out.println("------------------------------");
 		System.out.println("Impressão dos Ingredientes Utilizados: ");
+		
 		totalIngredientes = Pizza.totalIngredientes;
+		
 		for (String chave : totalIngredientes.keySet()) {
 			Integer valor = totalIngredientes.get(chave);
 			System.out.println(chave + " = " + valor);
