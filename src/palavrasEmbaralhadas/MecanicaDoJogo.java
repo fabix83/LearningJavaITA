@@ -1,5 +1,7 @@
 package palavrasEmbaralhadas;
 
+import java.io.IOException;
+
 public interface MecanicaDoJogo {
-	void mecanicaDoJogo(Embaralhador embaralha);
+	void mecanicaDoJogo() throws IOException;
 }
