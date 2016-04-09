@@ -1,7 +1,8 @@
 package palavrasEmbaralhadas;
 
-import java.io.IOException;
-
 public interface MecanicaDoJogo {
-	void mecanicaDoJogo() throws IOException;
+	boolean acertouOuNao(String palavraEscolhida, String palavraDigitada);
+	boolean continuaOuNao();
+	int getPontuacao();
 }
+

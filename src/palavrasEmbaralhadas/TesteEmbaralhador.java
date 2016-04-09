@@ -1,9 +1,6 @@
 package palavrasEmbaralhadas;
 
-import static org.junit.Assert.*;
-
 import java.io.IOException;
-
 import org.junit.Test;
 
 public class TesteEmbaralhador {
@@ -23,11 +20,18 @@ public class TesteEmbaralhador {
 		embaralhador.embaralhamento("par");
 	}*/
 	
-	
+	/*
 	@Test
 	public void testMecVidas() throws IOException {
 		MecanicaVidas mecanica = new MecanicaVidas(3);
 		mecanica.mecanicaDoJogo();
+	}*/
+	
+	
+	@Test
+	public void testMecVidas() throws IOException {
+		FabricaEmbaralhadores fabrica = new FabricaEmbaralhadores();
+		fabrica.getEmbaralhador();
 	}
 	
 }

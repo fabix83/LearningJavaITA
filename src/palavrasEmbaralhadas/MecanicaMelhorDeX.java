@@ -1,34 +1,35 @@
 package palavrasEmbaralhadas;
+public class MecanicaMelhorDeX implements MecanicaDoJogo {
 
-public class MecanicaVidas implements MecanicaDoJogo {
-
-	int vidasRestantes;
-	int pontos;
+	int quantidade;
+	int pontos;	
 	
-	public MecanicaVidas(int vidasRestantes) {
+	public MecanicaMelhorDeX(int quantidade) {
 		super();
-		this.vidasRestantes = vidasRestantes;
+		this.quantidade = quantidade;
 		this.pontos = 0;
 	}
 
 	@Override
-	public boolean acertouOuNao(String palavraEscolhida, String palavraDigitada ) {
+	public boolean acertouOuNao(String palavraEscolhida, String palavraDigitada) {
 		if (palavraDigitada.equals(palavraEscolhida)) {
 			pontos += palavraDigitada.length();
+			quantidade--;
 			return true;
 		}
-		vidasRestantes--;
+		quantidade--;
 		return false;
 	}
 
 	@Override
 	public boolean continuaOuNao() {
-		if (vidasRestantes == 0) return false;
+		if (quantidade == 0) return false;
 		return true;
 	}
-	
+
 	@Override
 	public int getPontuacao() {
 		return pontos;
 	}
+
 }
