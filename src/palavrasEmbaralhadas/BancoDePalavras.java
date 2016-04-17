@@ -9,13 +9,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-//Classe responsavel por retirar uma palavra de um banco de dados de Palavras
+//Classe responsavel por gerenciar um banco de dados de palavras
 public class BancoDePalavras {
 	
 	int contadorPalavras;
 	private Map<Integer, String> palavras = new HashMap<Integer, String>();
 
-	
+	//Metodo construtor que gera o banco de dados de palavras a partir de um arquivo guardando numa HashMap
 	BancoDePalavras () throws IOException {
 		
 		FileInputStream stream = null;
@@ -40,11 +40,9 @@ public class BancoDePalavras {
 				e.printStackTrace();
 			}	
 		}
-		
-		System.out.println("Temos " + contadorPalavras + " palavras!");
-		
 	}
 	
+	//Metodo que retorna uma palavra aleatoria do banco
 	public String pegaPalavraBanco() {
 		Random gerador = new Random();
 		int numAleatorio;
@@ -54,12 +52,14 @@ public class BancoDePalavras {
 			numAleatorio = gerador.nextInt(contadorPalavras);
 			//System.out.print("n(" + numAleatorio + ") -> ");	
 			palavraAleatoria = palavras.get(numAleatorio);	
+			
 			if (palavraAleatoria.length() > 2 && palavraAleatoria.length() < 10) {
 				break;
 			}
 		}
 		
 		palavraAleatoria = palavraAleatoria.toLowerCase();
+		
 		return palavraAleatoria;	
 	}
 	

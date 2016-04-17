@@ -2,6 +2,7 @@ package palavrasEmbaralhadas;
 
 import java.util.Random;
 
+//devolve o embaralhador aleatoriamente
 public class FabricaEmbaralhadores {
 	
 	private Embaralhador embaralhador;
@@ -15,7 +16,6 @@ public class FabricaEmbaralhadores {
 		} else {
 			embaralhador = new EmbInverterParImpar();
 		}
-		
 		return embaralhador;	
 	}
 

@@ -2,6 +2,7 @@ package palavrasEmbaralhadas;
 
 public class EmbInverterParImpar implements Embaralhador {
 
+	//metodo de embaralhamento
 	@Override
 	public String embaralhamento(String palavra) {
 		int tamanho;
